@@ -42,7 +42,8 @@ fn main() {
 
     // owerenship_borrwing::owerenship_and_borrwing();
     // lifetimes::lifetimes()
-    another_function(12345);
+    // nested_loop();
+    for_loop();
 }
 
 // struct Other {
