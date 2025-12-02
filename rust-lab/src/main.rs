@@ -1,11 +1,14 @@
 // static NAME: &str = "Rust";
 // const AGE: i8 = 20;
 
-#[derive(PartialEq)]
-enum Status {
-    Active,
-    InActive,
-}
+// #[derive(PartialEq)]
+// enum Status {
+//     Active,
+//     InActive,
+// }
+
+mod lifetimes;
+mod owerenship_borrwing;
 
 fn main() {
     // let something: String = String::from("Rust");
@@ -20,46 +23,60 @@ fn main() {
     // for name in names.iter() {
     //     println!("Name: {}", name);
     // }
-    let other = Other {
-        something: String::from("Python"),
-    };
+    // let other = Other {
+    //     something: String::from("Python"),
+    // };
 
-    let some = Some::new(String::from("Rust"), 16, other, Status::Active);
+    // let some = Some::new(String::from("Rust"), 16, other, Status::Active);
 
-    println!("Name: {}", some.get_name());
-    println!("Status: {}", some.get_status());
+    // println!("Name: {}", some.get_name());
+    // println!("Status: {}", some.get_status());
+
+    // let s1 = String::from("Rust");
+    // let len = calculate(&s1);
+
+    // println!("{} so'zining uzunligi: {}", s1, len)
+
+    // owerenship_borrwing::owerenship_and_borrwing();
+    lifetimes::lifetimes()
+
 }
 
-struct Other {
-    something: String,
-}
+// struct Other {
+//     something: String,
+// }
 
-struct Some {
-    name: String,
-    age: u8,
-    other: Other,
-    status: Status,
-}
+// struct Some {
+//     name: String,
+//     age: u8,
+//     other: Other,
+//     status: Status,
+// }
 
-impl Some {
-    fn new(name: String, age: u8, other: Other, status: Status) -> Self {
-        Self {
-            name: name.to_string(),
-            age,
-            other,
-            status,
-        }
-    }
+// impl Some {
+//     fn new(name: String, age: u8, other: Other, status: Status) -> Self {
+//         Self {
+//             name: name.to_string(),
+//             age,
+//             other,
+//             status,
+//         }
+//     }
 
-    fn get_name(&self) -> &str {
-        &self.name
-    }
+//     fn get_name(&self) -> &str {
+//         &self.name
+//     }
 
-    fn get_status(&self) -> &'static str {
-        if self.status == Status::Active {
-            "active"
-        } else {
-            "inactive"
-        }
-    }
-}
+//     fn get_status(&self) -> &'static str {
+//         if self.status == Status::Active {
+//             "active"
+//         } else {
+//             "inactive"
+//         }
+//     }
+// }
+
+
+// fn calculate(s: &str) -> usize {
+//     s.len()
+// }
