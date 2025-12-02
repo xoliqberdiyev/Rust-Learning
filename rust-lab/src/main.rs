@@ -1,3 +1,5 @@
+include!("../fuctions/another.rs");
+
 // static NAME: &str = "Rust";
 // const AGE: i8 = 20;
 
@@ -9,6 +11,7 @@
 
 mod lifetimes;
 mod owerenship_borrwing;
+
 
 fn main() {
     // let something: String = String::from("Rust");
@@ -38,8 +41,8 @@ fn main() {
     // println!("{} so'zining uzunligi: {}", s1, len)
 
     // owerenship_borrwing::owerenship_and_borrwing();
-    lifetimes::lifetimes()
-
+    // lifetimes::lifetimes()
+    another_function(12345);
 }
 
 // struct Other {
