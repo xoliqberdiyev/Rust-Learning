@@ -1,3 +1,5 @@
+use std::string;
+
 include!("../fuctions/another.rs");
 
 // static NAME: &str = "Rust";
@@ -11,7 +13,6 @@ include!("../fuctions/another.rs");
 
 mod lifetimes;
 mod owerenship_borrwing;
-
 
 fn main() {
     // let something: String = String::from("Rust");
@@ -43,7 +44,18 @@ fn main() {
     // owerenship_borrwing::owerenship_and_borrwing();
     // lifetimes::lifetimes()
     // nested_loop();
-    for_loop();
+    // for_loop();
+
+    let mut s = String::from("hello");
+    println!("{s}");
+
+    change(&mut s);
+
+    println!("{s}");
+}
+
+fn change(s: &mut String) {
+    let _ = s.to_uppercase();
 }
 
 // struct Other {
@@ -79,7 +91,6 @@ fn main() {
 //         }
 //     }
 // }
-
 
 // fn calculate(s: &str) -> usize {
 //     s.len()
